@@ -3,6 +3,6 @@
   justify-items: center;
   justify-content: center;
   align-content: center;
-  width: calc(20vw + 10vh - 15vmin);
+  width: calc(20vw + 30vh - 20vmin);
   margin: calc(3vw + 4vh - 4vmin);
 }
