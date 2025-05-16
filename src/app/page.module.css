@@ -3,6 +3,10 @@
   justify-items: center;
   justify-content: center;
   align-content: center;
-  width: calc(20vw + 30vh - 20vmin);
+  width: calc(20vw + 40vh - 45vmin);
   margin: calc(3vw + 4vh - 4vmin);
+  border-radius: calc(3vw + 4vh - 4vmin);
+  border: calc(1.5vw + 2vh - 4vmin) solid white;
+  display: inline-block;
+  overflow: hidden;
 }
