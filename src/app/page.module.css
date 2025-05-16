@@ -1,0 +1,8 @@
+.centralLogo {
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  width: calc(20vw + 10vh - 15vmin);
+  margin: calc(3vw + 4vh - 4vmin);
+}
