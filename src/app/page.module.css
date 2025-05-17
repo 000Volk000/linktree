@@ -1,12 +1,22 @@
-.centralLogo {
+.centralImage {
   align-items: center;
   justify-items: center;
   justify-content: center;
   align-content: center;
   width: calc(20vw + 40vh - 45vmin);
-  margin: calc(3vw + 4vh - 4vmin);
   border-radius: calc(3vw + 4vh - 4vmin);
-  border: calc(1.5vw + 2vh - 4vmin) solid white;
+  border: calc(1.5vw + 3vh - 4vmin) solid rgb(47, 134, 89);
   display: inline-block;
   overflow: hidden;
+}
+
+.smallTree {
+  width: calc(5vw + 6vh - 6.5vmin);
+}
+
+.firstText {
+  color: #15432bff;
+  font-size: calc(2vw + 4vh - 4vmin);
+  font-family: var(--font-red-hat-display);
+  font-weight: 700;
 }
