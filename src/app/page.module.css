@@ -21,11 +21,19 @@
   font-weight: 700;
 }
 
+.name {
+  color: rgb(47, 134, 89);
+  font-size: calc(2vw + 4vh - 4vmin);
+  font-family: var(--font-red-hat-display);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
 .cage {
   background: rgba(255, 255, 255, 0.65);
   border-radius: calc(3vw + 4vh - 4vmin);
   border: calc(1vw + 2vh - 3vmin) solid rgb(47, 134, 89);
-  margin-top: calc(2vw + 1vh - 2vmin);
+  margin-bottom: calc(2vw + 1vh - 2vmin);
   padding: 20px;
 
   display: flex;
@@ -54,7 +62,17 @@
 
 .buttonGroup {
   display: flex;
-  margin-top: calc(2vw + 1vh - 2vmin);
+  margin-bottom: calc(2vw + 1vh - 2vmin);
+}
+
+.linkedinButton,
+.githubButton,
+.twitterButton {
+  width: calc(20vw + 40vh - 45vmin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .linkedinButton {
@@ -92,7 +110,7 @@
   display: block;
   width: 20em;
   height: 20em;
-  left: -5em;
+
   text-align: center;
   transition: box-shadow 0.5s ease-out;
   z-index: -1;
@@ -143,7 +161,7 @@
   display: block;
   width: 20em;
   height: 20em;
-  left: -5em;
+
   text-align: center;
   transition: box-shadow 0.5s ease-out;
   z-index: -1;
@@ -176,6 +194,7 @@
   color: rgb(40, 144, 241);
   transition: color 0.3s 0.1s ease-out;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .twitterButton span {
@@ -194,7 +213,7 @@
   display: block;
   width: 20em;
   height: 20em;
-  left: -5em;
+
   text-align: center;
   transition: box-shadow 0.5s ease-out;
   z-index: -1;

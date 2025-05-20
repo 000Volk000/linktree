@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div
       style={{
-        minHeight: "100vh",
+        minHeight: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -29,6 +29,9 @@ export default function Home() {
         >
           <img src={darioAsl.src} alt="darioAslImage" />
         </a>
+      </div>
+      <div className="flex justify-center items-center">
+        <p className={styles.name}>Darío Martínez Kostyuk</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full justify-items-center">
         <div
