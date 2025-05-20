@@ -30,6 +30,26 @@ export default function Home() {
           <img src={darioAsl.src} alt="darioAslImage" />
         </a>
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full justify-items-center">
+        <div
+          className={`flex justify-center items-center ${styles.cage}`}
+          style={{ width: "100%", maxWidth: "calc(100% - 20px)" }}
+        >
+          <p className={styles.cageTitle}>About Me</p>
+          <p className={styles.defaultFont}>- Full-Stack Explorer</p>
+          <p className={styles.defaultFont}>- Quick to learn, hard to bore</p>
+        </div>
+        <div
+          className={`flex justify-center items-center ${styles.cage}`}
+          style={{ width: "100%", maxWidth: "calc(100% - 20px)" }}
+        >
+          <p className={styles.cageTitle}>Formation</p>
+          <p className={styles.defaultFont}>- Computer engineering student</p>
+          <p className={styles.defaultFont}>
+            - Coordinator of SalmorejoTech VII
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
