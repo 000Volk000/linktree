@@ -100,7 +100,7 @@ body {
   height: 20px;
   background: rgba(47, 134, 89, 0.3);
   animation: animate 20s linear infinite;
-  bottom: -200px;
+  top: -200px;
 }
 
 .circles li:nth-child(1) {
@@ -226,7 +226,7 @@ body {
   }
 
   100% {
-    transform: translateY(-1000px) rotate(720deg);
+    transform: translateY(1000px) rotate(720deg);
     opacity: 0;
     border-radius: 50%;
   }

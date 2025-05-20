@@ -1,6 +1,6 @@
 import darioAsl from "../assets/darioAsl.jpg";
 import styles from "./page.module.css";
-import treeLogo from "../assets/treeLogo.png";
+import treeLogo from "../assets/treeLogoTrasparent.png";
 
 export default function Home() {
   return (
