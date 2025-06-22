@@ -1,6 +1,7 @@
 import darioAsl from "../assets/darioAsl.jpg";
 import styles from "./page.module.css";
 import treeLogo from "../assets/treeLogoTrasparent.png";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,10 +15,12 @@ export default function Home() {
       }}
     >
       <div className="flex justify-center items-center">
-        <img
+        <Image
           src={treeLogo.src}
           alt="treeLogoImage"
           className={styles.smallTree}
+          width={400}
+          height={400}
         />
         <p className={styles.firstText}>LinkTree</p>
       </div>
@@ -27,7 +30,12 @@ export default function Home() {
           rel="noopener noreferrer"
           className={styles.centralImage}
         >
-          <img src={darioAsl.src} alt="darioAslImage" />
+          <Image
+            src={darioAsl.src}
+            alt="darioAslImage"
+            width={100000}
+            height={100000}
+          />
         </a>
       </div>
       <div className="flex justify-center items-center">
