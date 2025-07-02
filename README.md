@@ -20,6 +20,46 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Image Optimization
+
+This project includes automatic image optimization with Next.js:
+
+### Features
+
+- **Modern Formats**: Automatically serves WebP and AVIF to supported browsers
+- **Responsive Images**: Images are optimized for different screen sizes
+- **Lazy Loading**: Images load only when needed
+- **Blur Placeholders**: Smooth loading experience with blur placeholders
+
+### Optimizing Your Images
+
+To convert your existing images to WebP format:
+
+```bash
+npm run optimize-images
+```
+
+This will:
+
+- Convert JPG/PNG images to WebP format
+- Show file size savings
+- Only convert files that need updating
+
+### Manual Optimization
+
+You can also manually optimize images by:
+
+1. Converting to WebP format using tools like [Squoosh](https://squoosh.app/)
+2. Using the `sharp` library for programmatic conversion
+3. Using online converters for quick optimization
+
+### Best Practices
+
+- Use the `priority` prop for above-the-fold images
+- Set appropriate `quality` values (85-90 for photos, 80-85 for graphics)
+- Use `sizes` attribute for responsive images
+- Consider using `placeholder="blur"` for better loading experience
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 import treeLogo from "../assets/treeLogo.png";
+import treeLogoWebp from "../assets/treeLogo.webp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +25,9 @@ export const metadata: Metadata = {
   title: "Linktree - 000Volk000",
   description:
     "Linktree de Darío Martínez Kostyuk, generado mediante Next y Github Pages",
+  other: {
+    "format-detection": "telephone=no",
+  },
 };
 
 export default function RootLayout({
@@ -34,7 +38,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href={treeLogo.src} />
+        <link rel="icon" type="image/webp" href={treeLogoWebp.src} />
+        <link rel="icon" type="image/png" href={treeLogo.src} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${redHatDisplay.variable} antialiased`}

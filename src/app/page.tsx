@@ -1,6 +1,8 @@
 import darioAsl from "../assets/darioAsl.jpg";
+import darioAslWebp from "../assets/darioAsl.webp";
 import styles from "./page.module.css";
 import treeLogo from "../assets/treeLogoTrasparent.png";
+import treeLogoWebp from "../assets/treeLogoTrasparent.webp";
 import Image from "next/image";
 
 export default function Home() {
@@ -15,13 +17,20 @@ export default function Home() {
       }}
     >
       <div className="flex justify-center items-center">
-        <Image
-          src={treeLogo.src}
-          alt="treeLogoImage"
-          className={styles.smallTree}
-          width={400}
-          height={400}
-        />
+        <picture>
+          <source srcSet={treeLogoWebp.src} type="image/webp" />
+          <Image
+            src={treeLogo}
+            alt="LinkTree Logo"
+            className={styles.smallTree}
+            width={400}
+            height={400}
+            priority
+            quality={85}
+            placeholder="blur"
+            sizes="(max-width: 768px) 200px, 400px"
+          />
+        </picture>
         <p className={styles.firstText}>LinkTree</p>
       </div>
       <div className="flex justify-center items-center">
@@ -30,12 +39,21 @@ export default function Home() {
           rel="noopener noreferrer"
           className={styles.centralImage}
         >
-          <Image
-            src={darioAsl.src}
-            alt="darioAslImage"
-            width={100000}
-            height={100000}
-          />
+          <picture>
+            <source srcSet={darioAslWebp.src} type="image/webp" />
+            <Image
+              src={darioAsl}
+              alt="Darío Martínez Kostyuk"
+              width={300}
+              height={300}
+              quality={90}
+              placeholder="blur"
+              sizes="(max-width: 768px) 200px, 300px"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </picture>
         </a>
       </div>
       <div className="flex justify-center items-center">
