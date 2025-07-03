@@ -1,8 +1,7 @@
 import darioAsl from "../assets/darioAsl.jpg";
 import darioAslWebp from "../assets/darioAsl.webp";
 import styles from "./page.module.css";
-import treeLogo from "../assets/treeLogoTrasparent.png";
-import treeLogoWebp from "../assets/treeLogoTrasparent.svg";
+import treeLogo from "../assets/treeLogoTrasparent.svg";
 import Image from "next/image";
 import LinkButton from "./LinkButton";
 
@@ -19,7 +18,7 @@ export default function Home() {
     >
       <div className="flex justify-center items-center">
         <picture>
-          <source srcSet={treeLogoWebp.src} type="image/webp" />
+          <source srcSet={treeLogo.src} type="image/webp" />
           <Image
             src={treeLogo}
             alt="LinkTree Logo"
