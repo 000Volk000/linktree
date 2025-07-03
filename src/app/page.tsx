@@ -2,7 +2,7 @@ import darioAsl from "../assets/darioAsl.jpg";
 import darioAslWebp from "../assets/darioAsl.webp";
 import styles from "./page.module.css";
 import treeLogo from "../assets/treeLogoTrasparent.png";
-import treeLogoWebp from "../assets/treeLogoTrasparent.webp";
+import treeLogoWebp from "../assets/treeLogoTrasparent.svg";
 import Image from "next/image";
 import LinkButton from "./LinkButton";
 
@@ -24,8 +24,6 @@ export default function Home() {
             src={treeLogo}
             alt="LinkTree Logo"
             className={styles.smallTree}
-            width={400}
-            height={400}
             priority
             quality={85}
             sizes="(max-width: 768px) 200px, 400px"
