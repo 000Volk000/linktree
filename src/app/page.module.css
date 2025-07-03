@@ -67,8 +67,9 @@
 
 .linkedinButton,
 .githubButton,
-.twitterButton {
-  width: calc(20vw + 40vh - 45vmin);
+.twitterButton,
+.defaultButton {
+  width: calc(20vw + 40vh - 40vmin);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,9 +109,8 @@
   content: "";
   border-radius: 50%;
   display: block;
-  width: 20em;
-  height: 20em;
-
+  width: calc(20vw + 40vh - 40vmin);
+  height: calc(20vw + 40vh - 40vmin);
   text-align: center;
   transition: box-shadow 0.5s ease-out;
   z-index: -1;
@@ -123,7 +123,7 @@
 }
 
 .linkedinButton:hover::before {
-  box-shadow: inset 0 0 0 10em rgb(0, 119, 181);
+  box-shadow: inset 0 0 0 12.5em rgb(0, 119, 181);
 }
 
 .githubButton {
@@ -159,8 +159,8 @@
   content: "";
   border-radius: 50%;
   display: block;
-  width: 20em;
-  height: 20em;
+  width: calc(20vw + 40vh - 40vmin);
+  height: calc(20vw + 40vh - 40vmin);
 
   text-align: center;
   transition: box-shadow 0.5s ease-out;
@@ -174,7 +174,7 @@
 }
 
 .githubButton:hover::before {
-  box-shadow: inset 0 0 0 10em rgb(36, 41, 46);
+  box-shadow: inset 0 0 0 12.5em rgb(36, 41, 46);
 }
 
 .twitterButton {
@@ -210,8 +210,8 @@
   content: "";
   border-radius: 50%;
   display: block;
-  width: 20em;
-  height: 20em;
+  width: calc(20vw + 40vh - 40vmin);
+  height: calc(20vw + 40vh - 40vmin);
 
   text-align: center;
   transition: box-shadow 0.5s ease-out;
@@ -225,5 +225,55 @@
 }
 
 .twitterButton:hover::before {
-  box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
+  box-shadow: inset 0 0 0 12.5em rgb(40, 144, 241);
+}
+
+.defaultButton {
+  background: rgba(255, 255, 255, 0.65);
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #15432bff;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: #15432bff;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+.defaultButton span {
+  margin: 10px;
+}
+
+.defaultButton::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: calc(20vw + 40vh - 40vmin);
+  height: calc(20vw + 40vh - 40vmin);
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+.defaultButton:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #15432bff;
+}
+
+.defaultButton:hover::before {
+  box-shadow: inset 0 0 0 12.5em #15432bff;
 }
