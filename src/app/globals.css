@@ -4,6 +4,15 @@
   --background: white;
   /* --foreground: #171717; */
   --foreground: white;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: white;
+    --foreground: white;
+    color-scheme: light;
+  }
 }
 
 @theme inline {
@@ -14,10 +23,16 @@
 }
 
 body {
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+}
+
+html {
+  background: white !important;
+  background-color: white !important;
+  color-scheme: light;
 }
 
 @-webkit-keyframes animatetop {

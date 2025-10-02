@@ -42,6 +42,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href={treeLogo.src} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="color-scheme" content="light only" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${redHatDisplay.variable} antialiased`}
