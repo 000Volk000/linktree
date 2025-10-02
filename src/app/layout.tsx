@@ -43,6 +43,16 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="color-scheme" content="light only" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              html { background: white !important; color-scheme: light only !important; }
+              body { background: transparent !important; }
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${redHatDisplay.variable} antialiased`}
