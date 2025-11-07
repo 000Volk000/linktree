@@ -1,3 +1,4 @@
+import React from "react";
 import darioAsl from "../assets/darioAsl.jpg";
 import darioAslWebp from "../assets/darioAsl.webp";
 import styles from "./page.module.css";
@@ -17,17 +18,14 @@ export default function Home() {
       }}
     >
       <div className="flex justify-center items-center">
-        <picture>
-          <source srcSet={treeLogo.src} type="image/webp" />
-          <Image
-            src={treeLogo}
-            alt="LinkTree Logo"
-            className={styles.smallTree}
-            priority
-            quality={85}
-            sizes="(max-width: 768px) 200px, 400px"
-          />
-        </picture>
+        <Image
+          src={treeLogo}
+          alt="LinkTree Logo"
+          className={styles.smallTree}
+          priority
+          quality={85}
+          sizes="(max-width: 768px) 200px, 400px"
+        />
         <p className={styles.firstText}>LinkTree</p>
       </div>
       <div className="flex justify-center items-center">
@@ -36,21 +34,18 @@ export default function Home() {
           rel="noopener noreferrer"
           className={styles.centralImage}
         >
-          <picture>
-            <source srcSet={darioAslWebp.src} type="image/webp" />
-            <Image
-              src={darioAsl}
-              alt="Darío Martínez Kostyuk"
-              width={300}
-              height={300}
-              quality={90}
-              placeholder="blur"
-              sizes="(max-width: 768px) 200px, 300px"
-              style={{
-                objectFit: "cover",
-              }}
-            />
-          </picture>
+          <Image
+            src={darioAsl}
+            alt="Darío Martínez Kostyuk"
+            width={300}
+            height={300}
+            quality={90}
+            placeholder="blur"
+            sizes="(max-width: 768px) 200px, 300px"
+            style={{
+              objectFit: "cover",
+            }}
+          />
         </a>
       </div>
       <div className="flex justify-center items-center">
