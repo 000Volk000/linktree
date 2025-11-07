@@ -1,4 +1,4 @@
-FROM node:22 AS linktree
+FROM node:24 AS linktree
 
 WORKDIR /app
 COPY . /app
