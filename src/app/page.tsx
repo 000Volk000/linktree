@@ -1,6 +1,4 @@
-import React from "react";
 import darioAsl from "../assets/darioAsl.jpg";
-import darioAslWebp from "../assets/darioAsl.webp";
 import styles from "./page.module.css";
 import treeLogo from "../assets/treeLogoTrasparent.svg";
 import Image from "next/image";
@@ -56,18 +54,24 @@ export default function Home() {
           className={`flex justify-center items-center ${styles.cage}`}
           style={{ width: "100%", maxWidth: "calc(100% - 20px)" }}
         >
-          <p className={styles.cageTitle}>About Me</p>
-          <p className={styles.defaultFont}>- Full-Stack Explorer</p>
-          <p className={styles.defaultFont}>- Quick to learn, hard to bore</p>
+          <p className={styles.cageTitle}>Sobre mí</p>
+          <p className={styles.defaultFont}>
+            - Apasionado de Rust, Kubernetes y Linux
+          </p>
+          <p className={styles.defaultFont}>
+            - Desarrollo de aplicaciones y clusters self-hosted
+          </p>
         </div>
         <div
           className={`flex justify-center items-center ${styles.cage}`}
           style={{ width: "100%", maxWidth: "calc(100% - 20px)" }}
         >
-          <p className={styles.cageTitle}>Formation</p>
-          <p className={styles.defaultFont}>- Computer engineering student</p>
+          <p className={styles.cageTitle}>Trayectoria</p>
           <p className={styles.defaultFont}>
-            - Coordinator of SalmorejoTech VII
+            - Estudiante de Ingeniería Informática en la UCO
+          </p>
+          <p className={styles.defaultFont}>
+            - Coordinador del SalmorejoTech 2026
           </p>
         </div>
       </div>
@@ -121,7 +125,6 @@ export default function Home() {
         }
         variant="twitter"
       />
-      {/* <LinkButton text="Prueba" href="http://localhost:3000/" /> */}
     </div>
   );
 }
