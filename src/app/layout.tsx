@@ -23,9 +23,8 @@ const redHatDisplay = Red_Hat_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Linktree - 000Volk000",
-  description:
-    "Linktree de Darío Martínez Kostyuk, generado mediante Next y Github Pages",
+  title: "Linktree - Vukio",
+  description: "Linktree de Darío Martínez Kostyuk",
   other: {
     "format-detection": "telephone=no",
   },
