@@ -12,17 +12,11 @@ interface LinkButtonProps {
   variant?: "linkedin" | "github" | "twitter";
 }
 
-const variantClassMap = {
-  linkedin: styles.linkedinButton,
-  github: styles.githubButton,
-  twitter: styles.twitterButton,
-  default: styles.defaultButton,
-};
-
 const variantColorMap = {
   linkedin: "rgb(0, 119, 181)",
   github: "rgb(36, 41, 46)",
-  twitter: "rgb(40, 144, 241)",
+  // Twitter's rgb(40, 144, 241) is only 3.3:1 on white; this keeps the hue at 5.3:1
+  twitter: "#1a6dc0",
   default: "#15432bff",
 };
 
@@ -34,21 +28,14 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   icon,
   variant,
 }) => {
-  const className = variant
-    ? variantClassMap[variant]
-    : variantClassMap.default;
-  const useColor =
-    color || (variant ? variantColorMap[variant] : variantColorMap.default);
-  const customStyle = color
-    ? { borderColor: useColor, color: useColor }
-    : { borderColor: useColor };
+  const brand = color || variantColorMap[variant ?? "default"];
 
   let iconToShow: React.ReactNode;
   if (icon) {
     iconToShow = (
       <span
         aria-hidden="true"
-        style={{ display: "flex", alignItems: "center", marginRight: 10 }}
+        style={{ display: "flex", alignItems: "center" }}
       >
         {icon}
       </span>
@@ -60,14 +47,14 @@ const LinkButton: React.FC<LinkButtonProps> = ({
         alt=""
         width={28}
         height={28}
-        style={{ borderRadius: "50%", marginRight: 10 }}
+        style={{ borderRadius: "50%" }}
       />
     );
   } else {
     iconToShow = (
       <span
         aria-hidden="true"
-        style={{ display: "flex", alignItems: "center", marginRight: 10 }}
+        style={{ display: "flex", alignItems: "center" }}
       >
         <TreeLogoSvg width={28} height={28} />
       </span>
@@ -79,8 +66,8 @@ const LinkButton: React.FC<LinkButtonProps> = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={className}
-      style={customStyle}
+      className={styles.linkButton}
+      style={{ "--brand": brand } as React.CSSProperties}
     >
       {iconToShow}
       <span>{text}</span>
