@@ -88,7 +88,6 @@
   cursor: pointer;
   border: 1px solid rgb(0, 119, 181);
   border-radius: 25px;
-  outline: none;
   overflow: hidden;
   color: rgb(0, 119, 181);
   transition: color 0.3s 0.1s ease-out;
@@ -138,7 +137,6 @@
   cursor: pointer;
   border: 1px solid rgb(36, 41, 46);
   border-radius: 25px;
-  outline: none;
   overflow: hidden;
   color: rgb(36, 41, 46);
   transition: color 0.3s 0.1s ease-out;
@@ -189,7 +187,6 @@
   cursor: pointer;
   border: 1px solid rgb(40, 144, 241);
   border-radius: 25px;
-  outline: none;
   overflow: hidden;
   color: rgb(40, 144, 241);
   transition: color 0.3s 0.1s ease-out;
@@ -240,7 +237,6 @@
   cursor: pointer;
   border: 1px solid #15432bff;
   border-radius: 25px;
-  outline: none;
   overflow: hidden;
   color: #15432bff;
   transition: color 0.3s 0.1s ease-out;

@@ -46,7 +46,10 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   let iconToShow: React.ReactNode;
   if (icon) {
     iconToShow = (
-      <span style={{ display: "flex", alignItems: "center", marginRight: 10 }}>
+      <span
+        aria-hidden="true"
+        style={{ display: "flex", alignItems: "center", marginRight: 10 }}
+      >
         {icon}
       </span>
     );
@@ -54,7 +57,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
     iconToShow = (
       <Image
         src={imgSrc}
-        alt="icon"
+        alt=""
         width={28}
         height={28}
         style={{ borderRadius: "50%", marginRight: 10 }}
@@ -62,7 +65,10 @@ const LinkButton: React.FC<LinkButtonProps> = ({
     );
   } else {
     iconToShow = (
-      <span style={{ display: "flex", alignItems: "center", marginRight: 10 }}>
+      <span
+        aria-hidden="true"
+        style={{ display: "flex", alignItems: "center", marginRight: 10 }}
+      >
         <TreeLogoSvg width={28} height={28} />
       </span>
     );
@@ -74,12 +80,11 @@ const LinkButton: React.FC<LinkButtonProps> = ({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ textDecoration: "none" }}
+        className={className}
+        style={customStyle}
       >
-        <button className={className} style={customStyle}>
-          {iconToShow}
-          <span>{text}</span>
-        </button>
+        {iconToShow}
+        <span>{text}</span>
       </a>
     </div>
   );

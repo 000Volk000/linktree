@@ -241,3 +241,14 @@ html {
     border-radius: 50%;
   }
 }
+
+a:focus-visible {
+  outline: 3px solid rgb(47, 134, 89);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circles {
+    display: none;
+  }
+}
