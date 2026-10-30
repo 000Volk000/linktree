@@ -1,5 +1,5 @@
 import React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 import treeLogo from "../assets/treeLogo.png";
@@ -11,12 +11,38 @@ const redHatDisplay = Red_Hat_Display({
   display: "swap",
 });
 
+const title = "Linktree - Vukio";
+const description = "Linktree de Darío Martínez Kostyuk";
+
+// opengraph-image.jpg in this folder is picked up by Next automatically
 export const metadata: Metadata = {
-  title: "Linktree - Vukio",
-  description: "Linktree de Darío Martínez Kostyuk",
-  other: {
-    "format-detection": "telephone=no",
+  metadataBase: new URL("https://linktree.vukio.dev"),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: treeLogoWebp.src, type: "image/webp" },
+      { url: treeLogo.src, type: "image/png" },
+    ],
+    // explicit because a custom icons field disables the apple-icon.png convention
+    apple: "/apple-icon.png",
   },
+  openGraph: {
+    type: "profile",
+    url: "/",
+    siteName: "Vukio",
+    locale: "es_ES",
+    title,
+    description,
+  },
+  twitter: { card: "summary", creator: "@000Volk000" },
+  formatDetection: { telephone: false },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+  colorScheme: "only light",
 };
 
 export default function RootLayout({
@@ -26,26 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <head>
-        <link rel="icon" type="image/webp" href={treeLogoWebp.src} />
-        <link rel="icon" type="image/png" href={treeLogo.src} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="color-scheme" content="light only" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-              html { background: white !important; color-scheme: light only !important; }
-              body { background: transparent !important; }
-            `,
-          }}
-        />
-      </head>
-      <body
-        className={`${redHatDisplay.variable} antialiased`}
-      >
+      <body className={`${redHatDisplay.variable} antialiased`}>
         <div className="area" aria-hidden="true">
           <ul className="circles">
             <li></li>
