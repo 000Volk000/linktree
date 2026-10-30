@@ -57,7 +57,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${redHatDisplay.variable} antialiased`}
       >
-        <div className="area">
+        <div className="area" aria-hidden="true">
           <ul className="circles">
             <li></li>
             <li></li>
