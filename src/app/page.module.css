@@ -98,211 +98,62 @@
   width: 100%;
 }
 
-.linkedinButton,
-.githubButton,
-.twitterButton,
-.defaultButton {
-  width: min(100%, 20rem);
+.linkButton {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-.linkedinButton {
+  gap: 0.75rem;
+  width: min(100%, 20rem);
+  min-height: 3.25rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--brand);
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.65);
-  position: relative;
-  padding: 5px 15px;
-  display: flex;
-  align-items: center;
-  font-size: 17px;
+  color: var(--brand);
+  font-size: 1.0625rem;
   font-weight: 600;
   text-decoration: none;
-  cursor: pointer;
-  border: 1px solid rgb(0, 119, 181);
-  border-radius: 25px;
-  overflow: hidden;
-  color: rgb(0, 119, 181);
-  transition: color 0.3s 0.1s ease-out;
-  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    color 200ms ease,
+    transform 160ms var(--ease-out);
 }
 
-.linkedinButton span {
-  margin: 10px;
-}
-
-.linkedinButton::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+/* Fill closes in from the edges: an inset shadow on a circle as wide as the pill */
+.linkButton::before {
   content: "";
-  border-radius: 50%;
-  display: block;
-  width: calc(20vw + 40vh - 40vmin);
-  height: calc(20vw + 40vh - 40vmin);
-  text-align: center;
-  transition: box-shadow 0.5s ease-out;
-  z-index: -1;
-}
-
-.linkedinButton:hover {
-  background: transparent;
-  color: #fff;
-  border: 1px solid rgb(0, 119, 181);
-}
-
-.linkedinButton:hover::before {
-  box-shadow: inset 0 0 0 12.5em rgb(0, 119, 181);
-}
-
-.githubButton {
-  background: rgba(255, 255, 255, 0.65);
-  position: relative;
-  padding: 5px 15px;
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: 1px solid rgb(36, 41, 46);
-  border-radius: 25px;
-  overflow: hidden;
-  color: rgb(36, 41, 46);
-  transition: color 0.3s 0.1s ease-out;
-  text-align: center;
-}
-
-.githubButton span {
-  margin: 10px;
-}
-
-.githubButton::before {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  content: "";
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
   border-radius: 50%;
-  display: block;
-  width: calc(20vw + 40vh - 40vmin);
-  height: calc(20vw + 40vh - 40vmin);
-
-  text-align: center;
-  transition: box-shadow 0.5s ease-out;
   z-index: -1;
+  transition: box-shadow 350ms var(--ease-out);
 }
 
-.githubButton:hover {
-  background: transparent;
-  color: #fff;
-  border: 1px solid rgb(36, 41, 46);
+/* Gated so taps on touch screens don't leave a sticky fill */
+@media (hover: hover) and (pointer: fine) {
+  .linkButton:hover {
+    color: #fff;
+  }
+
+  .linkButton:hover::before {
+    box-shadow: inset 0 0 0 12.5em var(--brand);
+  }
 }
 
-.githubButton:hover::before {
-  box-shadow: inset 0 0 0 12.5em rgb(36, 41, 46);
+.linkButton:active {
+  transform: scale(0.97);
 }
 
-.twitterButton {
-  background: rgba(255, 255, 255, 0.65);
-  position: relative;
-  padding: 5px 15px;
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: 1px solid rgb(40, 144, 241);
-  border-radius: 25px;
-  overflow: hidden;
-  color: rgb(40, 144, 241);
-  transition: color 0.3s 0.1s ease-out;
-  text-align: center;
-}
-
-.twitterButton span {
-  margin: 10px;
-}
-
-.twitterButton::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  content: "";
-  border-radius: 50%;
-  display: block;
-  width: calc(20vw + 40vh - 40vmin);
-  height: calc(20vw + 40vh - 40vmin);
-
-  text-align: center;
-  transition: box-shadow 0.5s ease-out;
-  z-index: -1;
-}
-
-.twitterButton:hover {
-  background: transparent;
-  color: #fff;
-  border: 1px solid rgb(40, 144, 241);
-}
-
-.twitterButton:hover::before {
-  box-shadow: inset 0 0 0 12.5em rgb(40, 144, 241);
-}
-
-.defaultButton {
-  background: rgba(255, 255, 255, 0.65);
-  position: relative;
-  padding: 5px 15px;
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: 1px solid #15432bff;
-  border-radius: 25px;
-  overflow: hidden;
-  color: #15432bff;
-  transition: color 0.3s 0.1s ease-out;
-  text-align: center;
-}
-
-.defaultButton span {
-  margin: 10px;
-}
-
-.defaultButton::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  content: "";
-  border-radius: 50%;
-  display: block;
-  width: calc(20vw + 40vh - 40vmin);
-  height: calc(20vw + 40vh - 40vmin);
-  text-align: center;
-  transition: box-shadow 0.5s ease-out;
-  z-index: -1;
-}
-
-.defaultButton:hover {
-  background: transparent;
-  color: #fff;
-  border: 1px solid #15432bff;
-}
-
-.defaultButton:hover::before {
-  box-shadow: inset 0 0 0 12.5em #15432bff;
+@media (prefers-reduced-motion: reduce) {
+  .linkButton::before {
+    transition: none;
+  }
 }
