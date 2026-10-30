@@ -75,18 +75,16 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   }
 
   return (
-    <div className={styles.buttonGroup}>
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={className}
-        style={customStyle}
-      >
-        {iconToShow}
-        <span>{text}</span>
-      </a>
-    </div>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+      style={customStyle}
+    >
+      {iconToShow}
+      <span>{text}</span>
+    </a>
   );
 };
 
