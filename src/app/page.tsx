@@ -12,7 +12,6 @@ export default function Home() {
           src={treeLogo}
           alt="LinkTree Logo"
           className={styles.smallTree}
-          priority
           quality={85}
           sizes="(max-width: 768px) 200px, 400px"
         />
@@ -27,7 +26,8 @@ export default function Home() {
             height={300}
             quality={90}
             placeholder="blur"
-            sizes="(max-width: 768px) 200px, 300px"
+            preload
+            sizes="(max-width: 768px) 224px, 320px"
             style={{
               objectFit: "cover",
             }}
