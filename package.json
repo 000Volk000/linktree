@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "optimize-images": "node scripts/optimize-images.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -24,7 +23,7 @@
     "typescript": "^5.9.3"
   },
   "engines": {
-    "node": ">=24.x",
-    "pnpm": ">=8"
+    "node": ">=26.x",
+    "pnpm": ">=12"
   }
 }
