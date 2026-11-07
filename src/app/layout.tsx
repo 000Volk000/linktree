@@ -11,8 +11,9 @@ const redHatDisplay = Red_Hat_Display({
   display: "swap",
 });
 
-const title = "Linktree - Vukio";
-const description = "Linktree de Darío Martínez Kostyuk";
+const title = "Darío Martínez Kostyuk | Rust, Kubernetes y Linux";
+const description =
+  "Darío Martínez Kostyuk: estudiante de Ingeniería Informática en la UCO, apasionado de Rust, Kubernetes, Linux y el self-hosting. Coordinador del SalmorejoTech 2026.";
 
 // opengraph-image.jpg in this folder is picked up by Next automatically
 export const metadata: Metadata = {

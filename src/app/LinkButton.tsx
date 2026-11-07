@@ -65,7 +65,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="me noopener noreferrer"
       className={styles.linkButton}
       style={{ "--brand": brand } as React.CSSProperties}
     >
