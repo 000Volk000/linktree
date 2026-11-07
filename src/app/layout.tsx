@@ -15,7 +15,6 @@ const title = "Darío Martínez Kostyuk | Rust, Kubernetes y Linux";
 const description =
   "Darío Martínez Kostyuk: estudiante de Ingeniería Informática en la UCO, apasionado de Rust, Kubernetes, Linux y el self-hosting. Coordinador del SalmorejoTech 2026.";
 
-// opengraph-image.jpg in this folder is picked up by Next automatically
 export const metadata: Metadata = {
   metadataBase: new URL("https://linktree.vukio.dev"),
   title,
@@ -26,7 +25,6 @@ export const metadata: Metadata = {
       { url: treeLogoWebp.src, type: "image/webp" },
       { url: treeLogo.src, type: "image/png" },
     ],
-    // explicit because a custom icons field disables the apple-icon.png convention
     apple: "/apple-icon.png",
   },
   openGraph: {
