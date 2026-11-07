@@ -47,13 +47,7 @@ export default function Home() {
       />
       <main className={styles.page}>
         <div className="flex justify-center items-center">
-          <Image
-            src={treeLogo}
-            alt=""
-            className={styles.smallTree}
-            quality={85}
-            sizes="(max-width: 768px) 200px, 400px"
-          />
+          <Image src={treeLogo} alt="" className={styles.smallTree} />
           <p className={styles.firstText}>LinkTree</p>
         </div>
         <div className="flex justify-center items-center">

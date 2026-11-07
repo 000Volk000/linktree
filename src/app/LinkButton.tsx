@@ -15,7 +15,6 @@ interface LinkButtonProps {
 const variantColorMap = {
   linkedin: "rgb(0, 119, 181)",
   github: "rgb(36, 41, 46)",
-  // Twitter's rgb(40, 144, 241) is only 3.3:1 on white; this keeps the hue at 5.3:1
   twitter: "#1a6dc0",
   default: "#15432bff",
 };
