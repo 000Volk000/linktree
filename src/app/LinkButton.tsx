@@ -9,6 +9,7 @@ interface LinkButtonProps {
   imgSrc?: string;
   color?: string;
   icon?: React.ReactNode;
+  secondaryIcon?: React.ReactNode;
   variant?: "linkedin" | "github" | "twitter" | "bluesky";
 }
 
@@ -26,6 +27,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   imgSrc,
   color,
   icon,
+  secondaryIcon,
   variant,
 }) => {
   const brand = color || variantColorMap[variant ?? "default"];
@@ -58,6 +60,37 @@ const LinkButton: React.FC<LinkButtonProps> = ({
       >
         <TreeLogoSvg width={28} height={28} />
       </span>
+    );
+  }
+
+  if (variant === "twitter" && secondaryIcon) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="me noopener noreferrer"
+        aria-label={text}
+        className={`${styles.linkButton} ${styles.twitterSplitButton}`}
+      >
+        <span className={styles.twitterHalfFill} aria-hidden="true" />
+        <span className={styles.xHalfFill} aria-hidden="true" />
+        <span className={styles.twitterHalf}>
+          {iconToShow}
+          <span>Twitter</span>
+        </span>
+        <span className={styles.splitSlash} aria-hidden="true">
+          /
+        </span>
+        <span className={styles.xHalf}>
+          <span>X</span>
+          <span
+            aria-hidden="true"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            {secondaryIcon}
+          </span>
+        </span>
+      </a>
     );
   }
 
