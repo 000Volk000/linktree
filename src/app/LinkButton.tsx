@@ -9,13 +9,14 @@ interface LinkButtonProps {
   imgSrc?: string;
   color?: string;
   icon?: React.ReactNode;
-  variant?: "linkedin" | "github" | "twitter";
+  variant?: "linkedin" | "github" | "twitter" | "bluesky";
 }
 
 const variantColorMap = {
-  linkedin: "rgb(0, 119, 181)",
+  linkedin: "#0077b5",
   github: "rgb(36, 41, 46)",
-  twitter: "#1a6dc0",
+  twitter: "#1da1f2",
+  bluesky: "#0085ff",
   default: "#15432bff",
 };
 
