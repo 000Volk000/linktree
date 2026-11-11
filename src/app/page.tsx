@@ -58,7 +58,7 @@ export default function Home() {
       />
       <main className={styles.page}>
         <div className="flex justify-center items-center">
-          <Image src={treeLogo} alt="" className={styles.smallTree} />
+          <Image src={treeLogo} alt="Logo de Vukio Linktree" className={styles.smallTree} />
           <p className={styles.firstText}>LinkTree</p>
         </div>
         <div className="flex justify-center items-center">

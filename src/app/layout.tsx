@@ -11,7 +11,7 @@ const redHatDisplay = Red_Hat_Display({
 
 const title = "Darío Martínez Kostyuk (Vukio) | Linktree - Rust, Kubernetes y Linux";
 const description =
-  "Linktree de Darío Martínez Kostyuk (Vukio) — Dario Martinez Kostyuk: estudiante de Ingeniería Informática en la UCO, apasionado de Rust, Kubernetes, Linux y el self-hosting. Coordinador del SalmorejoTech 2026.";
+  "Linktree de Darío Martínez Kostyuk (Vukio): Ingeniería Informática en la UCO, Rust, Kubernetes, Linux, self-hosting y coordinador del SalmorejoTech 2026.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://linktree.vukio.dev"),
