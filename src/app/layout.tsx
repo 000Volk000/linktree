@@ -2,8 +2,6 @@ import React from "react";
 import type { Metadata, Viewport } from "next";
 import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
-import treeLogo from "../assets/treeLogo.png";
-import treeLogoWebp from "../assets/treeLogo.webp";
 
 const redHatDisplay = Red_Hat_Display({
   variable: "--font-red-hat-display",
@@ -11,27 +9,45 @@ const redHatDisplay = Red_Hat_Display({
   display: "swap",
 });
 
-const title = "Darío Martínez Kostyuk | Rust, Kubernetes y Linux";
+const title = "Darío Martínez Kostyuk (Vukio) | Linktree - Rust, Kubernetes y Linux";
 const description =
-  "Darío Martínez Kostyuk: estudiante de Ingeniería Informática en la UCO, apasionado de Rust, Kubernetes, Linux y el self-hosting. Coordinador del SalmorejoTech 2026.";
+  "Linktree de Darío Martínez Kostyuk (Vukio) — Dario Martinez Kostyuk: estudiante de Ingeniería Informática en la UCO, apasionado de Rust, Kubernetes, Linux y el self-hosting. Coordinador del SalmorejoTech 2026.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://linktree.vukio.dev"),
   title,
   description,
+  authors: [{ name: "Darío Martínez Kostyuk", url: "https://linktree.vukio.dev" }],
+  creator: "Darío Martínez Kostyuk (Vukio)",
+  keywords: [
+    "Darío Martínez Kostyuk",
+    "Dario Martinez Kostyuk",
+    "Darío Martínez",
+    "Dario Martinez",
+    "Darío Kostyuk",
+    "Dario Kostyuk",
+    "Vukio",
+    "000Volk000",
+    "Linktree",
+    "LinkTree",
+    "Linktree Vukio",
+    "Linktree Darío Martínez Kostyuk",
+    "Linktree Dario Martinez Kostyuk",
+    "Rust",
+    "Kubernetes",
+    "Linux",
+    "UCO",
+    "SalmorejoTech",
+  ],
   alternates: { canonical: "/" },
-  icons: {
-    icon: [
-      { url: treeLogoWebp.src, type: "image/webp" },
-      { url: treeLogo.src, type: "image/png" },
-    ],
-    apple: "/apple-icon.png",
-  },
   openGraph: {
     type: "profile",
     url: "/",
-    siteName: "Vukio",
+    siteName: "Linktree - Vukio",
     locale: "es_ES",
+    firstName: "Darío",
+    lastName: "Martínez Kostyuk",
+    username: "Vukio",
     title,
     description,
   },

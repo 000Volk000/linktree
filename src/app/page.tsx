@@ -16,16 +16,27 @@ const socialLinks = {
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
+  name: "Linktree de Darío Martínez Kostyuk (Vukio)",
   url: SITE_URL,
   inLanguage: "es",
   mainEntity: {
     "@type": "Person",
     name: "Darío Martínez Kostyuk",
-    alternateName: "000Volk000",
+    givenName: "Darío",
+    familyName: "Martínez Kostyuk",
+    alternateName: [
+      "Dario Martinez Kostyuk",
+      "Vukio",
+      "000Volk000",
+      "Darío Martínez",
+      "Dario Martinez",
+      "Darío Kostyuk",
+      "Dario Kostyuk",
+    ],
     url: SITE_URL,
     image: `${SITE_URL}/opengraph-image.jpg`,
     description:
-      "Estudiante de Ingeniería Informática en la UCO, apasionado de Rust, Kubernetes y Linux.",
+      "Linktree de Darío Martínez Kostyuk (Vukio), estudiante de Ingeniería Informática en la UCO, apasionado de Rust, Kubernetes y Linux.",
     knowsAbout: ["Rust", "Kubernetes", "Linux", "Self-hosting"],
     affiliation: {
       "@type": "CollegeOrUniversity",
